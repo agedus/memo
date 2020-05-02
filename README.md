@@ -41,18 +41,30 @@ Here is the simple way of downloading my script and setting it up.
 ### How to use memo
 1. For help:
     ```sh
-    memo -h
+    memo -h/--help
     ```
 2. To add a memo:
     ```sh
-    memo -a
+    memo -a/--add 
+    ```
+    or:
+     ```sh
+    memo -a/--add "What ever you want between the quotes"
     ```
 3. To delete a memo:
     ```sh
-    memo -d
+    memo -d /--delete
+    ```
+    or:
+        ```sh
+    memo -d /--delete <line number/numbers>
     ```
 4. To run a memo:
     ```sh
-    memo -r
+    memo -r/--run
     ```
-There are some more ways to tho this use the -h argument to see them.
+    or:
+     ```sh
+    memo -r/--run <line number/numbers>
+    ```
+
