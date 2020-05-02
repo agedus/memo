@@ -56,7 +56,7 @@ Here is the simple way of downloading my script and setting it up.
     memo -d /--delete
     ```
     or:
-        ```sh
+    ```sh
     memo -d /--delete <line number/numbers>
     ```
 4. To run a memo:
@@ -64,7 +64,7 @@ Here is the simple way of downloading my script and setting it up.
     memo -r/--run
     ```
     or:
-     ```sh
+    ```sh
     memo -r/--run <line number/numbers>
     ```
 
