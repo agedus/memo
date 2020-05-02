@@ -53,11 +53,11 @@ Here is the simple way of downloading my script and setting it up.
     ```
 3. To delete a memo:
     ```sh
-    memo -d /--delete
+    memo -d/--delete
     ```
     or:
     ```sh
-    memo -d /--delete <line number/numbers>
+    memo -d/--delete <line number/numbers>
     ```
 4. To run a memo:
     ```sh
