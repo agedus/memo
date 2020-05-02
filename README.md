@@ -24,38 +24,34 @@ You whil also be able to run the memos you save.
 Here is the simple way of downloading my script and setting it up.
 ### Installing
 
-1. Go to your home folder
-    ```sh
-    cd
-    ```
-2. Clone the git repository
+1. Clone the git repository
     ```sh
     git clone https://github.com/agedus/memo.git
     ```
-3. Enter the folder memo.
+2. Enter the folder memo.
     ```sh
     cd memo
     ```
-4. Than run the install script(do not run it ass with sudo).
+3. Than run the install script(do not run it ass with sudo).
     ```sh
     sh install
     ```
-5. Done
+4. Done
 
 ### How to use memo
-For help:
+1. For help:
     ```sh
     memo -h
     ```
-To add a memo:
+2. To add a memo:
     ```sh
     memo -a
     ```
-To delete a memo:
+3. To delete a memo:
     ```sh
     memo -d
     ```
-To run a memo:
+4. To run a memo:
     ```sh
     memo -r
     ```
