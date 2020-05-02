@@ -1,6 +1,14 @@
 #!/usr/bin/bash
 
-lib_path="$HOME/memos"
+lib_path="$HOME/.memos"
+
+add_lines () {
+    for text in $@
+    do
+        echo $text >> $lib_path
+    done
+    echo "Your memo/memos has been added"
+}
 
 delete_lines () {
     del_lines=""
@@ -28,8 +36,15 @@ then
 
 elif [ $1 == "--add" ] || [ $1 == "-a" ]
 then
-    echo $2 >> $lib_path
-    echo "Your memo has been added. "
+    if [ $2 ]
+    then
+       add_lines "${@:2}" 
+    else
+        cat -n $lib_path
+        echo "Type in the memo you would like to add."
+        read memo
+        echo $memo >> $lib_path
+    fi
 elif [ $1 == "--delete" ] || [ $1 == "-d" ]
 then
     if [ $2 ]

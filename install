@@ -1,0 +1,15 @@
+#!/bin/bash
+
+echo ""
+echo "Install started."
+echo ""
+
+# Add a memos file in home directory
+
+touch $HOME/.memos
+echo "Made a memos file in Home directry."
+sudo cp memo /usr/bin/memo
+echo "moved command to usr/bin/memo"
+echo ""
+echo "Install done"
+exit 0
