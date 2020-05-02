@@ -1,0 +1,65 @@
+#!/usr/bin/bash
+
+lib_path="$HOME/memos"
+
+delete_lines () {
+    del_lines=""
+    del="d;"
+    for number in $@ 
+    do
+        del_lines="$del_lines$number$del"
+    done
+    sed -i "${del_lines}" $lib_path
+}
+
+execute_lines () {
+    for number in $@
+    do    
+        command=$(sed "${number}q;d;" $lib_path)
+        echo "$command"
+        $command
+    done    
+}
+
+if [ $# -eq 0 ] || [ $1 == "--show" ] || [ $1 == "-s" ]
+then    
+    echo "These are your memos right now:"
+    cat -n $lib_path
+
+elif [ $1 == "--add" ] || [ $1 == "-a" ]
+then
+    echo $2 >> $lib_path
+    echo "Your memo has been added. "
+elif [ $1 == "--delete" ] || [ $1 == "-d" ]
+then
+    if [ $2 ]
+    then
+        delete_lines "${@:2}"
+    else
+        cat -n $lib_path
+        echo "Type the line number of the memo you like to delete."
+        read delete_numbers
+        IFS=' ' read -r -a del_numbers <<< "$delete_numbers"
+        delete_lines "${del_numbers[@]}"
+    fi
+elif [ $1 == "--run" ] || [ $1 == "-r" ]
+then
+    if [ $2 ]
+    then
+        execute_lines "${@:2}"    
+    else
+        cat -n $lib_path
+        echo "Type the line numbers that you would like to run (they wil run in order)"
+        read run_lines
+        IFS=' ' read -r -a run_numbers <<< "$run_lines"
+        execute_lines "${run_numbers[@]}"
+    fi
+elif [ $1 == "--help" ] || [ $1 == "-h" ]
+then
+    echo "These are the arguments that you can use."
+    echo '-a, --add         adds the text you type after it to your memos file. use "" if you would like to add a sentence.'
+    echo "-s, --show        shows all your memos in your memo file."
+    echo "-d, --delete      deletes the line by number in memos file. you can add multiple lines to delete at once."
+    echo "-r, --run         runs it like a command. selected by number of line in memos file."
+    echo "-h, --help        runs this command."
+fi
