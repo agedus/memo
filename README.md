@@ -55,3 +55,7 @@ Here is the simple way of downloading my script and setting it up.
     ```sh
     memo -r
     ```
+There are some more ways to tho this use 
+```sh
+-h
+``` to see them.
