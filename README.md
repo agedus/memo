@@ -2,7 +2,7 @@
 <br />
 <p align="center">
 
-  <h1 align="center">Memos</h1>
+  <h1 align="center">Memo</h1>
 
   <p align="center">
     A bash script to be able to add memories in the commandline
@@ -22,18 +22,49 @@ You whil also be able to run the memos you save.
 ## Installing Memos
 
 Here is the simple way of downloading my script and setting it up.
-### installing
+### Installing
 
-1. Go to your home folder
-    ```sh
-    cd
-    ```
-2. Clone the git repository
+1. Clone the git repository
     ```sh
     git clone https://github.com/agedus/memo.git
     ```
+2. Enter the folder memo.
+    ```sh
+    cd memo
+    ```
 3. Than run the install script(do not run it ass with sudo).
     ```sh
-    sh memo/install
+    sh install
     ```
-5. Done
+4. Done
+
+### How to use memo
+1. For help:
+    ```sh
+    memo -h/--help
+    ```
+2. To add a memo:
+    ```sh
+    memo -a/--add 
+    ```
+    or:
+     ```sh
+    memo -a/--add "What ever you want between the quotes"
+    ```
+3. To delete a memo:
+    ```sh
+    memo -d/--delete
+    ```
+    or:
+    ```sh
+    memo -d/--delete <line number/numbers>
+    ```
+4. To run a memo:
+    ```sh
+    memo -r/--run
+    ```
+    or:
+    ```sh
+    memo -r/--run <line number/numbers>
+    ```
+
