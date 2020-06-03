@@ -52,7 +52,13 @@ case "$1" in
     -[Dd]|--[Dd][Ee][Ll][Ee][Tt][Ee])
         if [ $2 ]
         then
-            delete_lines "${@:2}"
+            if [ $2 == "all" ]
+            then 
+                truncate -s 0 $lib_path
+                echo "All lines are deleted"
+            else
+                delete_lines "${@:2}"
+            fi
         else
             cat -n $lib_path
             echo "Type the line number of the memo you like to delete."
