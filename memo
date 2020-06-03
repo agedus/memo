@@ -77,8 +77,9 @@ case "$1" in
         echo "These are the arguments that you can use."
         echo '-a, --add         adds the text you type after it to your memos file. use "" if you would like to add a sentence.'
         echo "-s, --show        shows all your memos in your memo file."
-        echo "-d, --delete      deletes the line by number in memos file. you can add multiple lines to delete at once."
+        echo "-d, --delete      deletes the line by number in memos file. you can add multiple lines to delete at once or type all and delete all the lines."
         echo "-r, --run         runs it like a command. selected by number of line in memos file."
+        echo "-u, --uninstall   deletes the program and your memos."
         echo "-h, --help        runs this command."
         ;;
     *)
