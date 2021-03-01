@@ -16,7 +16,7 @@
 ## About The Project
 
 This is made so you can add a memo and watch them from the command line.
-You whil also be able to run the memos you save.
+You wil also be able to run the memos you save.
 
 <!-- GETTING STARTED -->
 ## Installing Memos
