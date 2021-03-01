@@ -32,7 +32,7 @@ Here is the simple way of downloading my script and setting it up.
     ```sh
     cd memo
     ```
-3. Than run the install script(do not run it as with sudo).
+3. Then run the install script(do not run it as with sudo).
     ```sh
     sh install
     ```
