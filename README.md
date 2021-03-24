@@ -5,7 +5,7 @@
   <h1 align="center">Memo</h1>
 
   <p align="center">
-    A bash script to be able to add memories in the commandline
+    A bash script to add memories in your commandline
     <br>
     <br>
     Made for linux
