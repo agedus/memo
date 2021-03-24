@@ -8,7 +8,7 @@
     A bash script to add memories in your commandline
     <br>
     <br>
-    Made for linux
+    Made for Linux
   </p>
 </p>
 
