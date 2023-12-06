@@ -17,7 +17,7 @@ execute_lines () {
     do    
         command=$(sed "${number}q;d;" $lib_path)
         echo "$command"
-        $command
+        eval "$command"
     done    
 }
 
