@@ -95,4 +95,27 @@ Here is the simple way of downloading my script and setting it up.
     ```sh
     memo --uninstall
     ```
+
+## Keycloak Configuration
+
+If you use Keycloak for authentication with the mobile app, you need to register the app's custom redirect URI (`com.signinapp://callback/oauth2redirect`) as a valid redirect URI in your Keycloak client.
+
+### Option 1: Import the provided client configuration
+
+A ready-to-use Keycloak client configuration is provided in `keycloak/client-config.json`. To import it:
+
+1. Open the Keycloak Admin Console.
+2. Select your realm.
+3. Navigate to **Clients** → **Import client**.
+4. Upload `keycloak/client-config.json` and save.
+
+### Option 2: Add the redirect URI manually
+
+1. Open the Keycloak Admin Console.
+2. Select your realm and go to **Clients**.
+3. Select your client (e.g. `signinapp`).
+4. Under **Settings**, add `com.signinapp://callback/oauth2redirect` to the **Valid Redirect URIs** field.
+5. Click **Save**.
+
+> **Note:** PKCE (`S256`) is enabled in the provided configuration to improve security for public mobile clients.
     

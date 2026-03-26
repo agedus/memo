@@ -1,0 +1,19 @@
+{
+  "clientId": "signinapp",
+  "name": "Sign In App",
+  "description": "Memo mobile application",
+  "enabled": true,
+  "publicClient": true,
+  "standardFlowEnabled": true,
+  "implicitFlowEnabled": false,
+  "directAccessGrantsEnabled": false,
+  "redirectUris": [
+    "com.signinapp://callback/oauth2redirect",
+    "http://localhost:*"
+  ],
+  "webOrigins": [],
+  "protocol": "openid-connect",
+  "attributes": {
+    "pkce.code.challenge.method": "S256"
+  }
+}
